@@ -12,15 +12,29 @@
 // It is step 1.
 export default function() {
 
-    return [
+    return {
 
-        { title: 'Perfect React.js', pages: 39, desc: "It is still interesting" },
-        { title: 'Java Algorithms', pages: 100, desc: "It is essence of all the programming languages"},
-        { title: 'JavaScript Review', pages: 234, desc: "It is necessary to me" },
-        { title: 'MongoDB', pages: 222, desc: "I want to study this."}
-   
-    ]
+        textData : [
 
+            { title: 'Perfect React.js', pages: 39, desc: 'First step of your ReactJS', level: 'Basic', auth: 'Justin An' },
+            { title: 'Java Algorithms', pages: 100, desc: 'To enhance your JAVA programming skill', level: 'intermediate', auth: 'Eunmi Hong'},
+            { title: 'JavaScript Review', pages: 234, desc: 'Understanding ES6', level: 'Professional', auth: 'Wassim Anderson' },
+            { title: 'MongoDB', pages: 222, desc: 'For the advanced level of database management.', level: 'Begiiner', auth: 'Augusto Greener'},
+            { title: 'mySQL', pages: 231, desc: 'For basic data manipulation.', level: 'Begiiner', auth: 'Justin Beever'},
+            { title: 'PHP', pages: 222, desc: 'Basic backend solution', level: 'Begiiner', auth: 'Augusto Greener'}
+       
+            ],
+    
+        imageBooks :  { React: 'ReactJS.PNG', 
+                        Java: 'java_Algorithms.PNG',
+                        javaScript: 'javaScript.PNG',
+                        MongoDB: 'MongoDB.PNG',
+                        mySQL: 'mySQL.PNG',
+                        PHP: 'PHP.PNG' 
+                    }
+
+    }
+    
 }
 
 

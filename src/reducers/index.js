@@ -4,10 +4,18 @@ import books from './book_list';
 
 import selectedBook from './selected_book';
 
+import imageBook from './selected_picture';
+
+//console.log(imageBook, ".............imageBook");
+// const bookData = books();
+// console.log(bookData.imageBooks)
+
 const reducers = combineReducers ({
 
+    
     books,
-    selectedBook
+    selectedBook,
+    imageBook
     
 });
 

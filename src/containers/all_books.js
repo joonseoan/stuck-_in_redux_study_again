@@ -10,27 +10,20 @@ import { bindActionCreators } from 'redux';
 
 class AllBooks extends Component {
 
-    constructor (props) {
-
-        super(props);
-        this.BookList = this.BookList.bind(this);
-    
-    };
-
     BookList () {
-
+        console.log(this, "what is this in the firstline?");
        // console.log(this.props.books)
         // Wrong : return (this.props.Books.map((book) => {});
+        
         return (this.props.books.map((book) => {
-
-            
+            console.log(this, "what is this?")
 
             return (
 
-                <li 
+                <li
 
                     key = { book.title }
-                    onClick = { () =>  this.props.allBook(book) }
+                    onClick = { () =>  this.props.allBook(book, this.props.imageBook) }
                     className = 'list-group-item'>
                     { book.title }
                 
@@ -44,7 +37,7 @@ class AllBooks extends Component {
 
     render () {
 
-
+        console.log(this + "here ? this what?");
         return (
 
             <ul>
@@ -63,7 +56,8 @@ const mapStateToProps = (state) => {
         
     return ({
     
-        books: state.books
+        books: state.books.textData,
+        imageBook: state.books.imageBooks
     
     });
 };
@@ -71,7 +65,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 
-    
     return bindActionCreators( { allBook : allBook }, dispatch)
        // bookItem : (book) => {dispatch(actions.allBook(book))}
 
